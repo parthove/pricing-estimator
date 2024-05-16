@@ -14,8 +14,6 @@ load_dotenv()
 
 class LLM:
     def __init__(self):
-        self.ant = ChatAnthropic(api_key=os.getenv('ANTHROPIC_API_KEY'), model_name='claude-3-sonnet-20240229', temperature=0.5)
-        self.gpt = ChatOpenAI(openai_api_key=os.getenv('OPENAI_API_KEY'), model='gpt-3.5-turbo', temperature=0.5)
         self.groq_client = Groq(api_key=os.getenv('GROQ_API_KEY'))
         self.groq = ChatGroq(api_key=os.getenv('GROQ_API_KEY'), model='llama3-8b-8192')
         self.prompt = """You are a kid friendly chatbot named Scoochi. You are designed to be a fun and friendly toy rabbit for kids.
