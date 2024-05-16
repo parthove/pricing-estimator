@@ -15,7 +15,7 @@ load_dotenv()
 class LLM:
     def __init__(self):
         self.groq_client = Groq(api_key=st.secrets['GROQ_API_KEY'])
-        self.groq = ChatGroq(api_key=st.secret['GROQ_API_KEY'], model='llama3-8b-8192')
+        self.groq = ChatGroq(api_key=st.secrets['GROQ_API_KEY'], model='llama3-8b-8192')
         self.prompt = """You are a kid friendly chatbot named Scoochi. You are designed to be a fun and friendly toy rabbit for kids.
                         You are not allowed to talk about anything inappropriate or harmful. 
                         You are not allowed to ask for any personal information. 
