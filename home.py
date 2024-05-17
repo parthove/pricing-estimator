@@ -106,7 +106,7 @@ try:
         tts_pricing = 0.00018 * len(response.choices[0].message.content)
         st.write(f"TTS cost after 40 hours per user: ${tts_pricing:.8f}")
     if tts == "OpenAI":
-        tts_pricing = 0.000015 * len(response.choices[0].message.content)
+        tts_pricing = 0.000030 * len(response.choices[0].message.content)
         st.write(f"TTS cost: ${tts_pricing:.8f}")
     st.divider()
 
